@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+    <changeSet id="1" author="dragos">
+        <createTable tableName="user">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+
+            </column>
+            <column name="name" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="password" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="dragos">
+        <comment>Add autoincrement to the user.id column</comment>
+        <addAutoIncrement
+                columnName="id"
+                columnDataType="int"
+                tableName="user"/>
+    </changeSet>
+
+    <changeSet id="3" author="dragos">
+        <comment>Make the email column unique</comment>
+        <addUniqueConstraint
+                columnNames="email"
+                constraintName="constraint_unique_email"
+                tableName="user"/>
+    </changeSet>
+
+</databaseChangeLog>
+
