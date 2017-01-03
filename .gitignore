@@ -1,0 +1,9 @@
+*.class
+
+# User-specific stuff:
+.idea/
+
+# Package Files #
+*.jar
+*.war
+*.ear

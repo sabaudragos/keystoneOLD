@@ -7,8 +7,6 @@ import javax.ws.rs.core.Response;
 
 import static org.junit.Assert.*;
 
-//@ContextConfiguration("application-context.xml")
-//@RunWith(SpringJUnit4ClassRunner.class)
 public class UserResourceTest {
 
     private final String VALID_PASSWORD = "Valid_Password_2016";
@@ -164,5 +162,8 @@ public class UserResourceTest {
         assertEquals("The user is invalid, should be BAD REQUEST",
                 Response.Status.BAD_REQUEST.getStatusCode(),
                 response.getStatus());
+        assertEquals("The user is invalid, the message should be " + RestConstants.BAD_REQUEST_INVALID_USER,
+                RestConstants.BAD_REQUEST_INVALID_USER,
+                response.getEntity());
     }
 }

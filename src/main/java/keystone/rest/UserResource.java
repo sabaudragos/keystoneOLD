@@ -23,11 +23,15 @@ public class UserResource {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
     public Response createUser(User user) {
 
         if (!validateUser(user)) {
             log.warn("Invalid user: {}", user);
-            return Response.status(Response.Status.BAD_REQUEST).build();
+            return Response
+                    .status(Response.Status.BAD_REQUEST)
+                    .entity(RestConstants.BAD_REQUEST_INVALID_USER)
+                    .build();
         }
 
         userService.createUser(user);
@@ -36,10 +40,18 @@ public class UserResource {
     }
 
     @GET
+    @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getUser() {
-
-        return Response.ok().build();
+    public Response getUser(@PathParam("id") Long id) {
+        if (id == null) {
+            return Response
+                    .status(Response.Status.BAD_REQUEST)
+                    .entity("User id is null")
+                    .build();
+        }
+        User user = userService.getUser(id);
+        log.info("The user was successfully fetched. User id: {}", user.getId());
+        return Response.ok().entity(user).build();
     }
 
     @PUT
