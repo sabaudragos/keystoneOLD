@@ -1,5 +1,6 @@
 package keystone;
 
+import app.config.KeystoneConfig;
 import liquibase.integration.spring.SpringLiquibase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

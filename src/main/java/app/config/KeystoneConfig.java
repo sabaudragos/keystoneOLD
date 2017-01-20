@@ -1,5 +1,6 @@
-package keystone;
+package app.config;
 
+import keystone.KeystoneScannable;
 import org.dozer.DozerBeanMapper;
 import org.dozer.Mapper;
 import org.springframework.context.annotation.Bean;
@@ -17,7 +18,7 @@ import javax.annotation.Resource;
 
 @Configuration
 @PropertySource("classpath:keystone.properties")
-@ComponentScan
+@ComponentScan(basePackageClasses = {KeystoneScannable.class})
 public class KeystoneConfig {
     @Resource
     private Environment environment;

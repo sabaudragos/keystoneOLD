@@ -15,7 +15,7 @@
     <facet type="Spring" name="Spring">
       <configuration>
         <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/java/keystone/KeystoneConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/app/config/KeystoneConfig.java</file>
         </fileset>
       </configuration>
     </facet>
@@ -40,9 +40,10 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.3.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.3.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:4.3.4.RELEASE" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:4.3.4.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-test:4.3.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:4.3.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:4.3.4.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-web:4.3.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: javax.ws.rs:javax.ws.rs-api:2.0" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.jersey.core:jersey-server:2.25" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.jersey.core:jersey-common:2.25" level="project" />
@@ -100,6 +101,8 @@
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-http:9.4.0.v20161208" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-util:9.4.0.v20161208" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-io:9.4.0.v20161208" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:3.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:4.3.4.RELEASE" level="project" />
   </component>
 </module>
 

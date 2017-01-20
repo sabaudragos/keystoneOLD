@@ -1,7 +1,7 @@
 package keystone.rest;
 
 import keystone.dto.User;
-import keystone.service.UserService;
+import keystone.service.UserServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.validator.routines.EmailValidator;
@@ -19,7 +19,7 @@ public class UserResource {
     private final int PASSWORD_MIN_SIZE = 6;
 
     @Resource
-    private UserService userService;
+    private UserServiceImpl userService;
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
